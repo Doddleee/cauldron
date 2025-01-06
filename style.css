@@ -4,12 +4,35 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Calibri, sans-serif;
+    font-family: "Sixtyfour", sans-serif;
     background: radial-gradient(circle, #400040 0%, #ffffff 100%);
+    flex-direction: column; /* Stack content vertically */
 }
 
 h1 {
     font-size: 1.5rem;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
+    margin-bottom: 20px; /* Add some space between the heading and the link */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #32CD32; /* Bright green color */
+    text-decoration: none; /* Remove underline */
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #00FF00; /* Lighter green on hover */
 }

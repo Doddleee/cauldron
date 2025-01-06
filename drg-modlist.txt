@@ -1,0 +1,115 @@
+Doddle's Modlist --- Last update: 17-10-'24
+--- Video & Graphic settings found here: https://pastebin.com/WZ4ujjyq ---
+
+Mods are loaded with the Community Mod Integration tool "Mint" available here: https://github.com/trumank/mint/
+
+!!! SOME MODS UNLISTED AS THEY ARE EITHER PRIVATE MODPACKS, OR NOT AVAILABLE ON MOD.IO ENTIRELY !!!
+[VERIFIED]
+--Dependencies & Frameworks--
+https://mod.io/g/drg/m/unified-ui
+https://mod.io/g/drg/m/drglib
+https://mod.io/g/drg/m/lbs-base-kit
+https://mod.io/g/drg/m/miracle-mod-manager
+https://mod.io/g/drg/m/custom-vanity-framework
+
+--Cosmetic / Visual--
+https://mod.io/g/drg/m/better-unknown-horror-indicator
+https://mod.io/g/drg/m/booloblast
+https://mod.io/g/drg/m/classes-icon-mammal-theme
+https://mod.io/g/drg/m/custom-spacerig
+https://mod.io/g/drg/m/customizable-weapon-fov
+https://mod.io/g/drg/m/expanded-lure
+https://mod.io/g/drg/m/googly
+https://mod.io/g/drg/m/improved-fire-bomber-projectile-visibility
+https://mod.io/g/drg/m/lgbtqube
+https://mod.io/g/drg/m/lomg-bulldog-classic
+https://mod.io/g/drg/m/melvin-as-mission-control
+https://mod.io/g/drg/m/miracles-magnificent-mules
+https://mod.io/g/drg/m/more-saturated-pink-sugar
+https://mod.io/g/drg/m/pastel-flamethrower
+https://mod.io/g/drg/m/pink-better-visibility-uplink-fuel-cell-bubble
+https://mod.io/g/drg/m/pinkboy
+https://mod.io/g/drg/m/pride-barrels
+https://mod.io/g/drg/m/punch-animation-for-pickaxe-power-attack
+https://mod.io/g/drg/m/rainbow-promotion-borders-full-set
+https://mod.io/g/drg/m/rgb-bots
+https://mod.io/g/drg/m/spacerig-17-after-hours
+https://mod.io/g/drg/m/squeakytoyhammer
+https://mod.io/g/drg/m/fontreplacer
+https://mod.io/g/drg/m/sweetheart-carbine
+https://mod.io/g/drg/m/wall-eye-removal
+https://mod.io/g/drg/m/white-septic-spreader
+https://mod.io/g/drg/m/white-stingtails
+https://mod.io/g/drg/m/modified-gunner-shield-effect
+
+--Performance / Graphics--
+https://mod.io/g/drg/m/advanced-darkness-reloaded
+https://mod.io/g/drg/m/ashless-radioactive-exclusion-zone
+https://mod.io/g/drg/m/automatic-flare-cleanup
+https://mod.io/g/drg/m/better-post-processing-reloaded
+https://mod.io/g/drg/m/clutterbegone
+https://mod.io/g/drg/m/corpse-feeder-removal
+https://mod.io/g/drg/m/no-cluster-munitions-carve
+https://mod.io/g/drg/m/no-ragdolls
+https://mod.io/g/drg/m/remove-all-particles
+https://mod.io/g/drg/m/goldchunksbegone
+
+--Fashion--
+https://mod.io/g/drg/m/stock-and-bosco-weapon-paintjob-unlocker
+https://mod.io/g/drg/m/cosmetic-restriction-remover
+https://mod.io/g/drg/m/handdrawncosmetics
+https://mod.io/g/drg/m/leaf-lovers-hat
+https://mod.io/g/drg/m/lederhorsen-unrestricted-paintjobs
+https://mod.io/g/drg/m/skin-transfer-to-class-traversal-tools
+https://mod.io/g/drg/m/vanity-restriction-eraser
+
+--Audio / SFX--
+https://mod.io/g/drg/m/azusas-weapon-sound-pack
+https://mod.io/g/drg/m/ironwill-count-down-voice
+https://mod.io/g/drg/m/no-shoutbox
+https://mod.io/g/drg/m/no-bird-chirping-in-space-rig
+https://mod.io/g/drg/m/quieter-low-oxygen-alarm
+https://mod.io/g/drg/m/silent-sprinting
+https://mod.io/g/drg/m/yoshi-sound-for-fossils-etc
+
+--Quality of Life--
+https://mod.io/g/drg/m/better-bolt-indicator
+https://mod.io/g/drg/m/better-explosion-range-indicator
+https://mod.io/g/drg/m/better-spectator-reloaded
+https://mod.io/g/drg/m/brighter-objects
+https://mod.io/g/drg/m/combined-presets
+https://mod.io/g/drg/m/customizable
+https://mod.io/g/drg/m/death-marker
+https://mod.io/g/drg/m/more-transparent-shield-and-blood-overlays
+https://mod.io/g/drg/m/no-camera-shake
+https://mod.io/g/drg/m/refinery-pipe-qol
+https://mod.io/g/drg/m/remove-jump-and-sprint-weapon-bobbing-fixed
+https://mod.io/g/drg/m/shield-expiration-colors
+https://mod.io/g/drg/m/hotkeys
+https://mod.io/g/drg/m/steeve-and-bot-better-visibility
+https://mod.io/g/drg/m/weapon-heat-crosshair
+
+--Informational--
+https://mod.io/g/drg/m/build-inspector
+https://mod.io/g/drg/m/combined-resources
+https://mod.io/g/drg/m/customizable-ally-outlines
+https://mod.io/g/drg/m/display-stabber-vines-hp
+https://mod.io/g/drg/m/health-number
+https://mod.io/g/drg/m/helldivers-2-death-screen
+https://mod.io/g/drg/m/live-mission-stat-tracker-plus
+https://mod.io/g/drg/m/platform-effect-indicator
+https://mod.io/g/drg/m/sticky-flame-status-icons
+https://mod.io/g/drg/m/temperature-number
+https://mod.io/g/drg/m/unique-status-effect-icons-hud-elements
+
+[APPROVED]
+--Gameplay-- 
+https://mod.io/g/drg/m/buyable-missions
+https://mod.io/g/drg/m/only-bugs-no-content
+
+--Bugfixes / (Reverted) Changes--
+https://mod.io/g/drg/m/fix-grenade-collision
+https://mod.io/g/drg/m/sentry-build-icon-fix
+https://mod.io/g/drg/m/revert-em-discharge 
+https://mod.io/g/drg/m/revert-resupply-stacking
+https://mod.io/g/drg/m/take-me-home-to-the-nest
