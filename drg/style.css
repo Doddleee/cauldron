@@ -1,0 +1,90 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "JetBrains Mono", monospace; 
+    background: radial-gradient(circle, #400040 0%, #ffffff 100%);
+    flex-direction: column; 
+}
+
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #32CD32; 
+    text-decoration: none; 
+    font-family: "JetBrains Mono", monospace; 
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #00FF00; 
+}
+
+
+.home-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.home-icon img {
+    width: 30px; 
+}
+
+
+.scrollable-list {
+    max-height: 500px; 
+    overflow-y: auto;
+    margin-bottom: 20px; 
+}
+
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
+a {
+    color: #32CD32; 
+    text-decoration: none; 
+    font-family: "JetBrains Mono", monospace; 
+}
+
+a:hover {
+    color: #00FF00; 
+}
+
+ul li a {
+    color: #32CD32;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+}
+
+ul li a:hover {
+    color: #00FF00;
+}
