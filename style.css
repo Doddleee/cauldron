@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(#400080 38%, #ffffff 100%);
+    background-image: radial-gradient(#400080 38%, #ffffff 100%);
 }
 
 h1 {
