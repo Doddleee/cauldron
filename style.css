@@ -12,7 +12,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: "JetBrains Mono", monospace; 
-    background: radial-gradient(circle, #400040 0%, #ffffff 100%);
+    background: #ffc067;
     flex-direction: column; 
 }
 
