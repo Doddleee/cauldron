@@ -30,7 +30,7 @@ nav ul {
 }
 
 nav li {
-    display: inline;
+    display: block;
     margin-right: 10px;
 }
 
@@ -53,7 +53,7 @@ nav a:hover {
 }
 
 .home-icon img {
-    width: 30px; 
+    width: 60px; 
 }
 
 

@@ -4,39 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mod Settings WIP</title>
-
     
     <link rel="preload" href="../style.css" as="style">
-
     
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-    
     <style>
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "JetBrains Mono", monospace; 
-            background: #ffc067 !important;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            font-family: "JetBrains Mono", monospace;
+            background: #020807; 
+            color: #f0f0f0; 
+            padding: 20px;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4 {
-            color: #ffffff;
+            color: #f0f0f0;
             text-align: center;
-            font-family: "JetBrains Mono", monospace;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
         }
 
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10; 
+        }
+        
         .home-icon img {
-            width: 30px; 
+            width: 60px;
+        }
+        .mod-section {
+            width: 100%;
+            max-width: 900px;
+            background: #1e1e1e; 
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); 
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mod-section:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .mod-section h2 {
+            color: #ce9fe0; 
+            margin-bottom: 15px;
+        }
+
+        .mod-section p {
+            color: #b0b0b0; 
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .mod-image {
+            width: 30%;
+            border-radius: 8px;
+            margin-top: 20px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .mod-image:hover {
+            opacity: 1; 
+        }
+
+        .external-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            background: #3e753e; 
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .external-link:hover {
+            background: #11808f; 
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 25px;
+            background: #623474;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: #9b7bbf; 
+        }
+
+        .settings-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .settings-list li {
+            margin-bottom: 15px;
+            color: #f0f0f0;
+            line-height: 1.6;
+            font-size: 1rem;
+            border-left: 4px solid #ad7fbe; 
+            padding-left: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #32CD32; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f0f0f0; 
         }
     </style>
-
-   
-    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -44,11 +157,68 @@
         <img src="../images/home-icon.png" alt="Back to Home">
     </a>
     
-    <h1>under construction</h1>
+    <h1>More mod configs being added slowly</h1>
+    
+    <div id="mules" class="mod-section">
+        <h2>Miracle's Magnificent M.U.L.E.s and More</h2>
+       
+        <a href="https://mod.io/g/drg/m/miracles-magnificent-mules" class="external-link" target="_blank">mod.io</a>
+        
+        <p>Customize Molly and other equipment to your liking!</p>
+        <img src="../images/mulesexample.png" alt="miracles-magnificent-mules" class="mod-image">
+        <img src="../images/mulesexample2.png" alt="miracles-magnificent-mules" class="mod-image">
+        <img src="../images/mulesexample3.png" alt="miracles-magnificent-mules" class="mod-image">
+        
+        <h3>Settings:</h3>
+        <ul class="settings-list">
+            <li><strong>Config:</strong> if you'd like to use my highly curated settings, you can click the 'download config' button and replace the settings.sav file in <em>FSD\Saved\SaveGames\Miracle\MagnificentMULEs!</em> </li>
+        </ul>
+
+
+        <a href="files/MiracleMulesConfig.zip" class="download-link" download="MiracleMulesConfig">download config</a>
+    </div>
+
+    <div id="weaponfov" class="mod-section">
+        <h2>Customizable Weapon FOV</h2>
+       
+        <a href="https://mod.io/g/drg/m/customizable-weapon-fov" class="external-link" target="_blank">mod.io</a>
+        
+        <p>Change the position of your weapons, careful with projectile based weapons as it changes where the projectile shoots from (mostly noticable on Breach Cutter and DRAK-25 Plasma Carbine)</p>
+        <img src="../images/fovexample.jpg" alt="customweaponfov" class="mod-image">
+        <img src="../images/fovexample2.jpg" alt="customweaponfov" class="mod-image">
+        <img src="../images/fovexample3.jpg" alt="customweaponfov" class="mod-image">
+        
+        <h3>Settings:</h3>
+        <ul class="settings-list">
+            <li><strong>Config:</strong> if you'd like to use my highly curated settings, you can click the 'download config' button and replace the settings.sav file in <em>FSD\Saved\SaveGames\Mods\CustomizeWeaponFOV</em><br><strong>NOTICE: I use a different model for the Experimental Plasma Charger, if you do NOT this viewmodel will lead to very weird behaviour</strong></li>
+
+        <a href="files/WeaponFOVConfig.zip" class="download-link" download="WeaponFOVConfig">download config</a>
+    </div>
+
+    <div id="customrig" class="mod-section">
+        <h2>Custom Spacerig + Spacerig 17 After Hours</h2>
+       
+        <a href="https://mod.io/g/drg/m/custom-spacerig" class="external-link" target="_blank">mod.io</a>
+        <a href="https://mod.io/g/drg/m/spacerig-17-after-hours" class="external-link" target="_blank">mod.io</a>
+        
+        
+        <p>Change your Spacerigs' material colors and other things with Custom Spacerig and create some ambience with Spacerig After Hours </p>
+        <img src="../images/rigexample.jpg" alt="rig" class="mod-image">
+        <img src="../images/rigexample2.jpg" alt="rig" class="mod-image">
+        <img src="../images/rigexample3.jpg" alt="rig" class="mod-image">
+        
+        <h3>Settings:</h3>
+        <ul class="settings-list">
+            <li><strong>Config:</strong> To download my Spacerig 17 After Hours settings, click the 'download config' button and replace the config.sav file in <em>FSD\Saved\SaveGames\Mods\SAD</em> They are optimised for late night gaming and are easy on the eyes. 
+                <br> I didn't manage to find the settings file for Custom Spacerig but the most notable feature is that I made the Force Fields solid black, making them see through</li>
+
+        <a href="files/SpacerigADConfig.zip" class="download-link" download="SpacerigADConfig">download config</a>
+    </div>
+    
     
     <nav>
         <ul>
-            <li><a href="/drg/">>Back</a></li> 
+            <li><a href="/drg/mod-list.html">>Back</a></li> 
         </ul>
     </nav>
 
