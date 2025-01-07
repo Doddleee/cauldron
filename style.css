@@ -1,4 +1,10 @@
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -80,12 +86,5 @@ a:hover {
     color: #00FF00; 
 }
 
-ul li a {
-    color: #32CD32;
-    text-decoration: none;
-    font-family: "JetBrains Mono", monospace;
-}
 
-ul li a:hover {
-    color: #00FF00;
-}
+

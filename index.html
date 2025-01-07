@@ -7,12 +7,9 @@
     
     <link rel="icon" href="images/icon.png" type="image/png">
     
-    
     <link rel="preload" href="style.css" as="style">
     
-   
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    
     
     <style>
         body {
@@ -21,9 +18,10 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: "JetBrains Mono", monospace; 
-            background: radial-gradient(circle, #400040 0%, #ffffff 100%);
+            font-family: "JetBrains Mono", monospace;
+            background: #020807;
             flex-direction: column;
+            overflow: hidden; /* Prevent fireflies from overflowing */
         }
 
         h1, h2, h3, h4 {
@@ -31,18 +29,117 @@
             text-align: center;
             font-family: "JetBrains Mono", monospace;
         }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #32CD32;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #00FF00;
+        }
+
+        /* Firefly styles */
+        .firefly {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 10px yellow, 0 0 15px yellow, 0 0 20px yellow;
+            opacity: 0;
+            animation: float 6s ease-in-out infinite, blink 1s ease-in-out infinite;
+        }
+
+        /* Animation for fireflies to move in a circular motion */
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(calc(50vw + 100px), calc(50vh + 100px));
+            }
+            50% {
+                transform: translate(calc(50vw - 100px), calc(50vh - 100px));
+            }
+            75% {
+                transform: translate(calc(50vw + 150px), calc(50vh - 150px));
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Animation for the blink effect */
+        @keyframes blink {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
     </style>
-    
-    
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>i'm working on it</h1>
+    <h1>welcome, currently still work in progress</progress></h1>
     
     <nav>
         <ul>
-            <li><a href="drg/">Deep Rock Galactic</a></li>
+            <li><a href="drg/">>Deep Rock Galactic</a></li>
         </ul>
     </nav>
+
+    <!-- Fireflies will be added dynamically here by JavaScript -->
+    <script>
+        // Function to create a firefly
+        function createFirefly() {
+            const firefly = document.createElement('div');
+            firefly.classList.add('firefly');
+            
+            // Set random initial position within the screen
+            firefly.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+            firefly.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            firefly.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random animation duration (longer)
+            firefly.style.animationDelay = Math.random() * 3 + 's'; // Random delay before appearing
+
+            // Append the firefly to the body
+            document.body.appendChild(firefly);
+            
+            // Remove the firefly after animation ends (this can be adjusted to keep them longer)
+            firefly.addEventListener('animationend', () => {
+                firefly.remove();
+            });
+        }
+
+        // Create fireflies with a higher count visible at any time
+        function createLimitedFirefly() {
+            const fireflies = document.querySelectorAll('.firefly');
+
+            // Increase the max number of fireflies (20 visible at any given time)
+            if (fireflies.length < 20) {
+                createFirefly();
+            }
+        }
+
+        // Create an initial batch of fireflies
+        for (let i = 0; i < 20; i++) {
+            createFirefly();
+        }
+
+        // Create a firefly every 1.5 seconds
+        setInterval(createLimitedFirefly, 1500);
+    </script>
 </body>
 </html>
