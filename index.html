@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doddle's Cauldron</title>
-    
     <link rel="icon" href="images/icon.png" type="image/png">
-    
     <link rel="preload" href="style.css" as="style">
-    
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             display: flex;
@@ -34,12 +32,14 @@
             list-style-type: none;
             padding: 0;
         }
-
+        
         nav li {
             display: block;
             margin-bottom: 10px;
         }
-
+        a {
+            text-decoration: none;
+        }
         nav a {
             color: #ce9fe0;
             text-decoration: none;
@@ -49,7 +49,6 @@
         nav a:hover {
             color: #3e753e;
         }
-
 
         .firefly { 
             position: absolute;
@@ -62,7 +61,6 @@
             animation: float 6s ease-in-out infinite, blink 1s ease-in-out infinite;
         }
 
-        
         @keyframes float {
             0% {
                 transform: translate(0, 0);
@@ -81,7 +79,6 @@
             }
         }
 
-        
         @keyframes blink {
             0%, 100% {
                 opacity: 0;
@@ -90,56 +87,115 @@
                 opacity: 1;
             }
         }
+
+        .hidden {
+            display: none;
+        }
+
+        .socials {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(206, 159, 224, 0.2);
+            color: white;
+            padding: 5px 5px;
+            border-radius: 5px;
+            font-size: 1rem;
+            max-width: auto;
+            display: none;
+            animation: fadeInOut 5s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <h1>welcome, currently still work in progress</progress></h1>
+    <h1>Doddle's Cauldron</h1>
     
     <nav>
         <ul>
-            <li><a href="drg/">>Deep Rock Galactic</a></li>
-            <li><a href="sot/">>Sea of Thieves</a></li>
+            <li><a href="drg/">>drg.</a></li>
+            <br> 
+            <li class="hidden"><a href="sot/">>sot. </a></li>
+            <br>
+            <li class="hidden"><a href="misc/">>misc. </a></li>
         </ul>
     </nav>
 
     <!-- you would not believe your eyes -->
     <script>
-        
         function createFirefly() {
             const firefly = document.createElement('div');
             firefly.classList.add('firefly');
-            
-            
             firefly.style.top = Math.random() * 100 + 'vh'; 
             firefly.style.left = Math.random() * 100 + 'vw'; 
             firefly.style.animationDuration = Math.random() * 5 + 5 + 's'; 
             firefly.style.animationDelay = Math.random() * 3 + 's'; 
-            
             document.body.appendChild(firefly);
-            
-            
+
             firefly.addEventListener('animationend', () => {
                 firefly.remove();
             });
         }
 
-        
         function createLimitedFirefly() {
             const fireflies = document.querySelectorAll('.firefly');
-
-            
             if (fireflies.length < 20) {
                 createFirefly();
             }
         }
 
-        
         for (let i = 0; i < 20; i++) {
             createFirefly();
         }
 
-        
         setInterval(createLimitedFirefly, 1500);
     </script>
+
+
+    
+    <div class="socials" id="socialBubble"></div>
+
+    <script>
+        const socialLinks = [
+            { name: '/doddleee', url: 'https://twitch.tv/doddleee', icon: 'fab fa-twitch' },
+            { name: '@doddleee', url: 'https://youtube.com/@doddleee', icon: 'fab fa-youtube' },
+            { name: '@do.dl', url: 'https://discord.com/users/401761006071709707', icon: 'fab fa-discord' },
+            { name: 'many different names', url: 'https://steamcommunity.com/id/doddlee/', icon: 'fab fa-steam' }
+        ];
+    
+        let currentIndex = 0;
+        const socialBubble = document.getElementById('socialBubble');
+    
+        function cycleSocials() {
+            socialBubble.style.display = 'none'; 
+            setTimeout(() => {
+                const link = socialLinks[currentIndex];
+                socialBubble.innerHTML = `<a href="${link.url}" target="_blank" style="color: white;">
+                                            <i class="${link.icon}" style="margin-right: 10px;"></i>${link.name}</a>`;
+                socialBubble.style.display = 'block'; 
+                currentIndex = (currentIndex + 1) % socialLinks.length; 
+            }, 500); 
+        }
+    
+        cycleSocials();
+        setInterval(cycleSocials, 8000); 
+    </script>
+    
+
 </body>
 </html>
