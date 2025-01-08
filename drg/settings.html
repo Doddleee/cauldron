@@ -3,41 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings WIP</title>
-    
+    <title>Doddle's Cauldron - DRG Settings</title>
     <link rel="icon" href="../images/icon.png" type="image/png">
-    
     <link rel="preload" href="../style.css" as="style">
-
     
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-    
     <style>
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "JetBrains Mono", monospace; 
-            background: #ffc067 !important;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            font-family: "JetBrains Mono", monospace;
+            background: #020807; 
+            color: #f0f0f0; 
+            padding: 20px;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4 {
-            color: #ffffff;
+            color: #f0f0f0;
             text-align: center;
-            font-family: "JetBrains Mono", monospace;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+        }
+        a {
+            color: #ce9fe0;
+            text-decoration: none;
+
         }
 
+
+        h5 {
+            color: #f0f0f0;
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10; 
+        }
+        
         .home-icon img {
-            width: 30px; 
+            width: 60px;
+        }
+        .mod-section, .text-section {
+            width: 100%;
+            max-width: 900px;
+            background: #1e1e1e; 
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); 
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mod-section:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        }
+        
+    
+        .mod-section h2, .text-section h2 {
+            color: #ce9fe0; 
+            margin-bottom: 15px;
+        }
+
+        .mod-section p, .text-section p {
+            color: #b0b0b0; 
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .mod-image, .text-image {
+            width: 30%;
+            border-radius: 8px;
+            margin-top: 20px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .mod-image:hover, .text-image:hover {
+            opacity: 1; 
+        }
+
+        .external-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            background: #3e753e; 
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .external-link:hover {
+            background: #11808f; 
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 25px;
+            background: #623474;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: #9b7bbf; 
+        }
+
+        .settings-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .settings-list li {
+            margin-bottom: 15px;
+            color: #f0f0f0;
+            line-height: 1.6;
+            font-size: 1rem;
+            border-left: 4px solid #ad7fbe; 
+            padding-left: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ce9fe0; 
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #3e753e; 
+        }
+
+        
+        .copy-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .copy-icon {
+            position: absolute;
+            top: 85px;
+            left: 200%;
+            width: 130px;
+            height: 130px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .copy-icon:hover {
+            opacity: 0.8;
+        }
+
+        
+        .highlight {
+            background-color: rgba(206, 159, 224, 0.3); 
+            transition: background-color 0.5s ease-out;
+        }
+
+        
+        .notification {
+            position: fixed;
+            top: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(206, 159, 224, 0.3);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
     </style>
-
-   
-    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -45,13 +210,105 @@
         <img src="../images/home-icon.png" alt="Back to Home">
     </a>
     
-    <h1>under construction</h1>
-    
-    <nav>
-        <ul>
-            <li><a href="/drg/">>Back</a></li> 
-        </ul>
-    </nav>
+    <h1>In-game settings and relevant performance mods</h1>
 
+    <div class="text-section">
+        <h2>Video settings</h2>
+        <h5>Append this at the top of the Engine.ini file:<br> (found in <em>FSD\Saved\Config\WindowsNoEditor)</em><br></h5>
+        
+        <div class="copy-container">
+            <p id="textToCopy">[SystemSettings]<br>
+                r.BloomQuality=0<br>
+                r.Decal.FadeDurationScale=0.01<br>
+                r.LensFlareQuality=0<br>
+                fx.EnableNiagaraSpriteRendering=0</p>
+
+            
+            <img src="../images/copy-icon.webp" alt="Copy text" class="copy-icon" onclick="copyText()">
+        </div>
+        <h5>In-game video settings</h5>
+        <p>Vsync: no<br>
+            DX12: yes<br>
+            Anti-Aliasing: FXAA<br>
+            Gamma: 1<br>
+            Upscaling: off<br>
+            Resolution scale: 100%<br>
+            Image sharpening: 20%<br>
+            View distance: High<br>
+            All others: Low</p>
+            <h5>For further graphical improvements and changes you can see my modlist <a href="mod-list.html#performance">here</a></h5>
+
+    </div>
+
+    <div id="darkness" class="mod-section">
+        <h2><a href="https://mod.io/g/drg/m/advanced-darkness-reloaded" target="_blank">Advanced Darkness</a></h2>
+       
+        
+        
+        <p>Fog: exponential height intensity 0.02<br>
+            Light: Range and intensity both 100%</p>
+      
+        
+        <h3>Guide:</h3>
+        <ul class="settings-list">
+            <li><strong>Config:</strong> if you'd like to use my highly curated settings, you can click the 'download config' button and replace the Master Config V3.0 file in <em>FSD\Saved\SaveGames\Mods\AdvancedDarkness</em> </li>
+        </ul>
+
+        <a href="files/AdvancedDarknessConfig.zip" class="download-link" download="AdvancedDarknessConfig">download config</a>
+    </div>
+
+    <div id="bpp" class="mod-section">
+        <h2><a href="https://mod.io/g/drg/m/better-post-processing-reloaded" target="_blank">Better Post Processing</a></h2>
+       
+        <p>Bloom: intensity 0.1<br>
+            Lensflare: Intensity 0<br>
+            Lensdirt: Intensity 0<br>
+            Vignette: Intensity 0<br>
+            Chromactic Aberration: Intensity and Offset both 0</p>
+       
+        <h3>Guide:</h3>
+        <ul class="settings-list">
+            <li><strong>Config:</strong> if you'd like to use my highly curated settings, you can click the 'download config' button and replace the Master Config V2.0 file in <em>FSD\Saved\SaveGames\Mods\Better Post Processing</em> </li>
+        </ul>
+
+        <a href="files/BPPConfig.zip" class="download-link" download="BPPConfig">download config</a>
+    </div>
+
+    
+    <div id="copyNotification" class="notification">
+        text copied :)
+    </div>
+
+    <script>
+        
+        function copyText() {
+            var text = document.getElementById("textToCopy").innerText;
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            
+           
+            var paragraph = document.getElementById("textToCopy");
+            paragraph.classList.add("highlight");
+            
+            
+            setTimeout(function() {
+                paragraph.classList.remove("highlight");
+            }, 1000);
+
+           
+            var notification = document.getElementById("copyNotification");
+            notification.style.display = "block";
+            
+            
+            setTimeout(function() {
+                notification.style.display = "none";
+            }, 3000);
+        }
+    </script>
+    
 </body>
 </html>
